@@ -17,6 +17,7 @@ main {
   width: 60%;
   margin: 0 auto;
   background-color: #ffffff;
+  border-radius: 5px;
 }
 .section-title p {
   font-size: 24px;
@@ -117,6 +118,9 @@ nav {
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
+.course {
+  box-shadow: 10 5 20 #9f9f9f;
+}
 .courses img {
   width: 224px;
   height: 104px;
@@ -158,4 +162,78 @@ nav {
 .course-duration img {
   width: 20px;
   height: 20px;
+}
+
+/* ---------------------------------------
+        Media Queries
+--------------------------------------- */
+/* Mobile View  */
+@media screen and (max-width: 576px) {
+  nav {
+    padding: 12px 5%;
+  }
+  .menu ul {
+    gap: 10px;
+  }
+  .logo {
+    gap: 14px;
+  }
+  main {
+    width: 90%;
+  }
+  .players {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    padding-left: 20px;
+  }
+  .blogs {
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: 20px;
+  }
+  .top_blogs {
+    padding: 20px;
+  }
+  .blog {
+    flex-direction: column;
+  }
+  .blog img {
+    width: 230px;
+    height: 150px;
+  }
+  .courses {
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: 20px;
+  }
+  .blog-title h3 {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+}
+
+/* Tablet View */
+@media screen and (min-width: 577px) and (max-width: 719px) {
+  nav {
+    padding: 12px 10%;
+    background-color: #562eff;
+    color: #ffff;
+    display: flex;
+    justify-content: space-between;
+  }
+  main {
+    width: 80%;
+  }
+  .players {
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 30px;
+  }
+  .blogs {
+    margin-left: 30px;
+  }
+  .blog {
+    flex-direction: column;
+  }
+  .courses {
+    margin-left: 30px;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
